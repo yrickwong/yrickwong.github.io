@@ -1,152 +1,135 @@
 
-<!DOCTYPE html>
-<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
-<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
-<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<!DOCTYPE HTML>
+<html>
 <head>
-  <meta charset="utf-8">
-  <title>My Octopress Blog</title>
-  <meta name="author" content="Your Name">
+	<meta charset="utf-8">
+	<title>小白羊's House</title>
+	<meta name="author" content="yrickwong">
 
-  
-  <meta name="description" content="提到ThreadLocal，有些Android或者Java程序员可能有所陌生，可能会提出种种问题，它是做什么的，是不是和线程有关，怎么使用呢？等等问题，本文将总结一下我对ThreadLocal的理解和认识，希望让大家理解ThreadLocal更加透彻一些。
-">
-  
+	
+	<meta name="description" content="提到ThreadLocal，有些Android或者Java程序员可能有所陌生，可能会提出种种问题，它是做什么的，是不是和线程有关，怎么使用呢？等等问题，本文将总结一下我对ThreadLocal的理解和认识，希望让大家理解ThreadLocal更加透彻一些。 Mar 21st, 2016 &hellip;">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <!-- http://t.co/dKP3o1e -->
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  
-  <link rel="canonical" href="http://yrickwong.github.io/">
-  <link href="/favicon.png" rel="icon">
-  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <link href="/atom.xml" rel="alternate" title="My Octopress Blog" type="application/atom+xml">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="//libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
-  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-
-  
-
+	<link href="/atom.xml" rel="alternate" title="小白羊's House" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script async="true" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	
 </head>
 
-<body   >
-  <header role="banner"><hgroup>
-  <h1><a href="/">My Octopress Blog</a></h1>
-  
-    <h2>A blogging framework for hackers.</h2>
-  
-</hgroup>
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">小白羊's House</a></h1>
+<nav id="main-nav"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+	<li><a href="/blog/aboutme">About Me</a></li>
+</ul>
+</nav>
+<nav id="mobile-nav">
+	<div class="alignleft menu">
+		<a class="button">Menu</a>
+		<div class="container"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+	<li><a href="/blog/aboutme">About Me</a></li>
+</ul>
+</div>
+	</div>
+	<div class="alignright search">
+		<a class="button"></a>
+		<div class="container">
+			<form action="https://www.baidu.com" method="get">
+				<input type="text" name="q" results="0">
+				<input type="hidden" name="q" value="site:yrickwong.github.io">
+			</form>
+		</div>
+	</div>
+</nav>
+<nav id="sub-nav" class="alignright">
+	<div class="social">
+		
+		
+		
+		
+    
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+    
+	</div>
+	<form class="search" action="https://www.baidu.com" method="get">
+		<input class="alignright" type="text" name="q" results="0">
+		<input type="hidden" name="q" value="site:yrickwong.github.io">
+	</form>
+</nav>
 
 </header>
-  <nav role="navigation"><ul class="subscription" data-subscription="rss">
-  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
-  
-</ul>
-  
-<form action="https://www.google.com/search" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="sitesearch" value="yrickwong.github.io">
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-  </fieldset>
-</form>
-  
-<ul class="main-navigation">
-  <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
-</ul>
+	
+		
+	
+	<div id="content" class="inner">
 
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2016/03/21/hello/">
+		
+			理解java中的ThreadLocal</a>
+	</h2>
+	<div class="entry-content">
+		<p>提到ThreadLocal，有些Android或者Java程序员可能有所陌生，可能会提出种种问题，它是做什么的，是不是和线程有关，怎么使用呢？等等问题，本文将总结一下我对ThreadLocal的理解和认识，希望让大家理解ThreadLocal更加透彻一些。</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+Mar 21st, 2016</div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/android/'>android</a>, <a class='category' href='/blog/categories/ios/'>ios</a>
+
+
+</div>
+	
+</div>
+</article>
+
+<nav id="pagenavi">
+    
+    
+    <div class="center"><a href="/blog/archives">Blog Archives</a></div>
 </nav>
-  <div id="main">
-    <div id="content">
-      <div class="blog-index">
-  
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2016/03/21/hello/">理解java中的ThreadLocal</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2016-03-21T11:46:25+08:00'><span class='date'><span class='date-month'>Mar</span> <span class='date-day'>21</span><span class='date-suffix'>st</span>, <span class='date-year'>2016</span></span> <span class='time'>11:46 am</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>提到ThreadLocal，有些Android或者Java程序员可能有所陌生，可能会提出种种问题，它是做什么的，是不是和线程有关，怎么使用呢？等等问题，本文将总结一下我对ThreadLocal的理解和认识，希望让大家理解ThreadLocal更加透彻一些。</p>
 </div>
-  
-  
+	<footer id="footer" class="inner">Copyright &copy; 2016
 
-
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
-</div>
-<aside class="sidebar">
-  
-    <section>
-  <h1>Recent Posts</h1>
-  <ul id="recent_posts">
-    
-      <li class="post">
-        <a href="/blog/2016/03/21/hello/">理解java中的ThreadLocal</a>
-      </li>
-    
-  </ul>
-</section>
-
-
-
-
-
-  
-</aside>
-
-    </div>
-  </div>
-  <footer role="contentinfo"><p>
-  Copyright &copy; 2016 - Your Name -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
-</p>
+    yrickwong
 
 </footer>
-  
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
 
-
-
-
-
-
-
-  <script type="text/javascript">
-    (function(){
-      var twitterWidgets = document.createElement('script');
-      twitterWidgets.type = 'text/javascript';
-      twitterWidgets.async = true;
-      twitterWidgets.src = '//platform.twitter.com/widgets.js';
-      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
-    })();
-  </script>
 
 
 
