@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Android | My Octopress Blog]]></title>
+  <title><![CDATA[Category: android | 小白羊's House]]></title>
   <link href="http://yrickwong.github.io/blog/categories/android/atom.xml" rel="self"/>
   <link href="http://yrickwong.github.io/"/>
-  <updated>2016-03-21T13:11:18+08:00</updated>
+  <updated>2016-03-21T14:24:29+08:00</updated>
   <id>http://yrickwong.github.io/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[yrickwong]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
